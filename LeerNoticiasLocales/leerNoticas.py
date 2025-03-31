@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 def buscar_noticias_molina():
     # URL de búsqueda en infomolina.es
-    url = "https://infomolina.es/molina"
+    url = "https://infomolina.es/molina"    
     # Realizar la solicitud HTTP
     response = requests.get(url)
     # Analizar el contenido HTML
@@ -28,7 +28,7 @@ def buscar_noticias_molina():
             break
         if count >= max_news:
             break 
-
+    print("\n")
 
 if __name__ == "__main__":
     buscar_noticias_molina() 
