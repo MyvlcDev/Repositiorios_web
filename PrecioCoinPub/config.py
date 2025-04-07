@@ -1,6 +1,6 @@
 bot_token = 'xxxxxxxx:xxxxxxxxxxxxxxxxxxxxxx' ### token de bot de Telegram
 chat_id = '-xxxxxxxxx' ### token de grupo de Telegram
-message = '¡Hola, este es un mensaje diario de la predicción del tiempo desde mi bot de Telegram!'
+message = ''
 
 milesegundosCoins= 1800000
 milesegundosIp= 1500000
