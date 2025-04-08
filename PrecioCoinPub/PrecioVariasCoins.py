@@ -91,9 +91,7 @@ def mensajePercioETH(ETH_precio,estado):
             print(f'Error al enviar el mensaje: {response.status_code}')
 
 def mensajePercioSOL(SOL_precio,estado):
-
     print("SOL")
-
     if estado==True:
         message= f"Precio ETH UP {SOL_precio} $ actualmente. :D "
         url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
@@ -120,9 +118,7 @@ def mensajePercioSOL(SOL_precio,estado):
         else:
             print(f'Error al enviar el mensaje: {response.status_code}')
 
-
 def mensajePercioADA(ADA_precio,estado):
-
     print("ADA")
     if estado==True:
         message= f"Precio ETH UP {ADA_precio} $ actualmente. :D "   
@@ -152,14 +148,12 @@ def mensajePercioADA(ADA_precio,estado):
             print(f'Error al enviar el mensaje: {response.status_code}')
 
 def main():
-
     while True:
         btc_price, eth_price, sol_price, ada_price = get_crypto_prices()
         print(f"El precio actual de Bitcoin es: ${btc_price}")
         print(f"El precio actual de Ethereum es: ${eth_price}")
         print(f"El precio actual de Solana es: ${sol_price}")
         print(f"El precio actual de Cardano (ADA) es: ${ada_price}")
-
         print(f"Tarjet: {  btc_target_price_dow} $ y { btc_target_price_up} $" )
         
         if btc_price >= btc_target_price_up:
