@@ -24,8 +24,11 @@ btc_target_price_dow = config.btc_price_down
 eth_target_price_up = config.eth_price_up # Cambia este valor al precio que desees para Ethereum
 eth_target_price_down = config.eth_price_down
 
-sol_target_price = config.sol_price # Cambia este valor al precio que desees para Solana
-ada_target_price = config.ada_price # Cambia este valor al precio que desees para Cardano (ADA)
+sol_target_price_up = config.sol_price_up # Cambia este valor al precio que desees para Solana
+sol_target_price_down=config.sol_price_down
+
+ada_target_price_up= config.ada_price_up # Cambia este valor al precio que desees para Cardano (ADA)
+ada_target_price_down= config.ada_price_down
 
 def get_crypto_prices():
     response = requests.get(url)
@@ -174,20 +177,20 @@ def main():
             print(f"¡Alerta! El precio de Ethereum ha pertidido los ${eth_target_price_down}")
             # Aquí puedes añadir código para enviar un correo electrónico, mensaje de texto, etc.
             mensajePercioETH(eth_price,False)        
-        if sol_price >= sol_target_price:
-            print(f"¡Alerta! El precio de Solana ha alcanzado o superado los ${sol_target_price}")
+        if sol_price >= sol_target_price_up:
+            print(f"¡Alerta! El precio de Solana ha alcanzado o superado los ${sol_target_price_up}")
             # Aquí puedes añadir código para enviar un correo electrónico, mensaje de texto, etc.
             mensajePercioSOL(sol_price,True)
-        if sol_price < sol_target_price:
-            print(f"¡Alerta! El precio de Solana ha alcanzado o superado los ${sol_target_price}")
+        if sol_price < sol_target_price_down:
+            print(f"¡Alerta! El precio de Solana ha alcanzado o superado los ${sol_target_price_down}")
             # Aquí puedes añadir código para enviar un correo electrónico, mensaje de texto, etc.
             mensajePercioSOL(sol_price,False)
-        if ada_price >= ada_target_price:
-            print(f"¡Alerta! El precio de Cardano (ADA) ha alcanzado o superado los ${ada_target_price}")
+        if ada_price >= ada_target_price_up:
+            print(f"¡Alerta! El precio de Cardano (ADA) ha alcanzado o superado los ${ada_target_price_up}")
             # Aquí puedes añadir código para enviar un correo electrónico, mensaje de texto, etc.
             mensajePercioADA(ada_price,True)        
-        if ada_price < ada_target_price:
-            print(f"¡Alerta! El precio de Cardano (ADA) ha alcanzado o superado los ${ada_target_price}")
+        if ada_price < ada_target_price_down:
+            print(f"¡Alerta! El precio de Cardano (ADA) ha alcanzado o superado los ${ada_target_price_down}")
             # Aquí puedes añadir código para enviar un correo electrónico, mensaje de texto, etc.
             mensajePercioADA(ada_price,False)
         
