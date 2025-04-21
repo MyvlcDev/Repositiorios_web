@@ -1,0 +1,19 @@
+/* Estilo para centrar el contador y darle formato */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+  }
+  
+  #contador {
+    position: absolute;
+    top: 10px; /* Ubicación en la esquina superior izquierda */
+    left: 10px;
+    font-size: 1.5em; /* Tamaño más pequeño */
+    color: #333;
+    border: 2px solid #333; /* Borde del contador */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f60909; /* Fondo blanco */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
